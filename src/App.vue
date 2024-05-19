@@ -1,7 +1,7 @@
 <script setup>
 import { ref, nextTick, onUpdated } from "vue";
 
-import { lectures } from "/lectures/lectures";
+import { lectures } from "../public/lectures/lectures";
 import { derivativesTests } from "/math_tests/derivatives";
 import { integralsTests } from "/math_tests/integrals";
 

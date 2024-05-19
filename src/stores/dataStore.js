@@ -5,7 +5,7 @@ export const useDataStore = defineStore('data', () => {
 
   async function getLectures(topic, lecture) {
     try {
-    const response = await fetch(`/lectures/${topic}/${lecture}.html`);
+    const response = await fetch(`/math-dxdy/public/lectures/${topic}/${lecture}.html`);
     const data = await response.text();
 
     if (typeof MathJax !== "undefined") {
