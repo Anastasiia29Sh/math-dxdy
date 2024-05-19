@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Интегралы</title>
+
+	<link rel="stylesheet" href="lectures/style.css">
+</head>
+<body>
+	<div class="lectures">
+		<h2 class="title-lecture">Метод подведения под знак дифференциала</h2>
+
+		<span class="formula"><b>f '(x)dx = d(f(x))</b></span>
+
+		<p>Если в подынтегральной функции прослеживается произведение двух функций, одна из которых является дифференциалом другой, тогда внесите под знак дифференциала нужную функцию. </p>
+		
+
+		<span class="formula"><b>\( \int f(φ(x))φ′(x)dx = \int f(φ(x))d(φ(x)) = \int f(u)du \)</b></span>
+		<span class="formula"><b>u = φ(x)</b></span>
+
+		<p><b><u>Подведение основных функций:</u></b></p>
+
+		<img src="lectures/img/i_2.png" alt="" />
+
+		<div class="example">
+        <span class="title">ПРИМЕР</span>
+
+        <span>\( \int f(kx+b)dx = \dfrac{1}{k} \int f(kx+b)d(kx+b) = \dfrac{1}{k} F(kx+b) + C \)</span>
+      </div>
+	</div>
+</body>
+</html>

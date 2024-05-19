@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Производная</title>
+
+  <link rel="stylesheet" href="lectures/style.css">
+
+  <style>
+    .img-form {
+      width: 50%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #b4b4b4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lectures">
+    <h2 class="title-lecture">Производные высшего порядка</h2>
+
+    <p>Производные более высокого порядка являются второй, третьей или дальнейшей производной функции, т.е. многократное дифференцирование функции приводит к производной более высокого порядка.</p>
+
+    <p>Производную n-го порядка от произведения двух функций можно найти по <b>формуле Лейбница</b>:</p>
+
+    <img src="lectures/img/formula-leybnitsa-dlya-proizvodnoy.png" alt="" class="img-form" />
+
+    <div class="example">
+      <span class="title">ПРИМЕР</span>
+
+      <span>Найти третью производную функции:</span>
+      <span>\( y = e^{-x}cosx \)</span>
+
+      <hr class="line" color="#ffce48" width="70%">
+
+      <span>Решение:</span>
+      <span>\( y''' = (e^{-x}cosx)''' = u'''v + 3u''v' + 3u'v'' + uv''' = \)</span>
+      <span>\( = -e^{-x}cosx + 3e^{-x}(-sinx) - 3e^{-x}(-cosx) + e^{-x}sinx =  \)</span>
+      <span>\( = e^{-x} · (-cosx - 3sinx + 3cosx + sinx) = 2e^{-x}·(cosx - sinx) \)</span>
+
+      <hr class="line" color="#ffce48" width="70%">
+
+      <span>Ответ:</span>
+      <span>\(y''' = 2e^{-x}·(cosx - sinx) \)</span>
+    </div>
+
+    <br>
+
+    <div class="rule">
+      <h3><i>Производные высших порядков от функций, заданных неявно:</i></h3>
+
+      <p>То, что функция и её производная выражены неявно сути дела не меняет, вторая производная – это производная от 1-й производной. Однако производные 2-го и более высоких порядков принято выражать только через «<b>x</b>» и «<b>y</b>». Поэтому в полученную 2-ю производную подставляется результат первой производной и т.д.</p>
+
+      <div class="example">
+      <span class="title">ПРИМЕР</span>
+
+      <span>Найти вторую производную функции:</span>
+      <span>\( y = e^y + 4x \)</span>
+
+      <hr class="line" color="#ffce48" width="70%">
+
+      <span>Решение:</span>
+      <span>Найдем первую производную:</span>
+      <span>\( y' = e^y · y' + 4 \)</span>
+      <span>\( y' = \dfrac{4}{1-e^y}  \)</span>
+      <span>Найдем вторую производную:</span>
+      <span>\( (y'(1-e^y))' = (4)' \)</span>
+      <span>\( y''(1-e^y) - e^y·(y')^2 = 0 \)</span>
+      <span>Подставим \( y' = \dfrac{4}{1-e^y}  \):</span>
+      <span>\( y''(1-e^y) - e^y· \left(\dfrac{4}{1-e^y}\right)^2 = 0 \)</span>
+      <span>\( y'' = \dfrac{16e^y}{(1-e^y)^3} \)</span>
+
+      <hr class="line" color="#ffce48" width="70%">
+
+      <span>Ответ:</span>
+      <span>\(y'' = \dfrac{16e^y}{(1-e^y)^3} \)</span>
+    </div>
+    </div>
+
+  </div>
+</body>
+</html>

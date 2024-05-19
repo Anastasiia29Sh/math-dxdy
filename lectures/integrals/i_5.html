@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Интегралы</title>
+
+	<link rel="stylesheet" href="lectures/style.css">
+</head>
+<body>
+	<div class="lectures">
+		<h2 class="title-lecture">Интегралы от тригонометрических функций</h2>
+
+		<p>При нахождении интегралов от тригонометрических функций используется ряд методов:</p>
+
+		<ul>
+			<li>Использование тригонометрических формул</li>
+			<li>Понижение степени подынтегральной функции</li>
+			<li>Метод замены переменной</li>
+			<li>Универсальная тригонометрическая подстановка</li>
+		</ul>
+
+		<div class="rule">
+      	<h3><i>Использование тригонометрических формул</i></h3>
+
+			<p>
+				Основные тригонометрические формулы:
+				<a href="lectures/materials/trigonometric_formulas.pdf" download>Скачать</a>
+			</p>
+
+			<div class="example">
+				<span class="title">ПРИМЕР</span>
+
+				<span>Найти интеграл:</span>
+				<span>\( \int (sin(5x)sin(7x))dx \)</span>
+
+				<hr class="line" color="#ffce48" width="70%">
+
+				<span>Решение:</span>
+				<span>Используем формулу:</span>
+				<span class="formula">\( sin(a)cos(b) = \dfrac{cos(a-b) - cos(a+b)}{2} \)</span>
+				<span>\( \int (sin(5x)sin(7x))dx = \int (\dfrac{cos(5x-7x) - cos(5x+7x)}{2})dx = \)</span>
+				<span>\( = \dfrac{1}{2} \int cos(2x)dx - \dfrac{1}{2} \int cos(12x)dx = \)</span>
+				<span>\( = \dfrac{1}{4} \int cos(2x)d(2x) - \dfrac{1}{24} \int cos(12x)d(12x) = \)</span>
+				<span>\( = \dfrac{sin(2x)}{4} - \dfrac{sin(12x)}{24} + C \)</span>
+
+				<hr class="line" color="#ffce48" width="70%">
+
+				<span>Ответ:</span>
+				<span>\( \dfrac{sin(2x)}{4} - \dfrac{sin(12x)}{24} + C \)</span>
+      	</div>
+		</div>
+
+		<div class="rule">
+      	<h3><i>Понижение степени подынтегральной функции</i></h3>
+
+			<p>Данный приём работает, когда в подынтегральных функциях есть синусы и косинусы в чётных степенях. Для понижения степени используют тригонометрические формулы:</p>
+
+			<span class="formula">\( sin^2(a) = \dfrac{1-cos(2a)}{2} \)</span>
+			<span class="formula">\( cos^2(a) = \dfrac{1+cos(2a)}{2} \)</span>
+			<span class="formula">\( sin(2a) = 2sin(a)cos(a) \)</span>
+
+			<div class="example">
+				<span class="title">ПРИМЕР</span>
+
+				<span>Найти интеграл:</span>
+				<span>\( \int cos^2(x)dx \)</span>
+
+				<hr class="line" color="#ffce48" width="70%">
+
+				<span>Решение:</span>
+				<span>\( \int cos^2(x)dx = \dfrac{1}{2} \int (1+cos(2x))dx = \)</span>
+				<span>\( = \dfrac{1}{2}(x + \dfrac{1}{2}sin(2x)) + C \)</span>
+
+				<hr class="line" color="#ffce48" width="70%">
+
+				<span>Ответ:</span>
+				<span>\( \dfrac{1}{2}(x + \dfrac{1}{2}sin(2x)) + C \)</span>
+      	</div>
+		</div>
+
+		<div class="rule">
+      	<h3><i>Метод замены переменной</i></h3>
+
+			<p>Основной предпосылкой для использования метода замены является тот факт, что в подынтегральном выражении есть некоторая функция f(x) и её производная f '(x):</p>
+
+			<span><b>\( \int f(x)·f '(x)dx \)</b></span>
+
+			<span class="formula"><b>\( \int udv = uv - \int vdu \)</b></span>
+		</div>
+
+		<div class="rule">
+      	<h3><i>Универсальная тригонометрическая подстановка</i></h3>
+
+			<p>Универсальная тригонометрическая подстановка – это частный случай метода замены переменной. Её можно попробовать применить, когда «не знаешь, что делать».</p>
+
+			<p>Типичными интегралами, где нужно применить универсальную тригонометрическую подстановку, являются следующие интегралы:</p>
+
+			<p>
+				<span><b>\( \int \dfrac{dx}{3+2cosx-sinx} \)</b></span>,
+				<span><b>\( \int \dfrac{dx}{3-sinx} \)</b></span>,
+				<span><b>\( \int \dfrac{dx}{3+2cosx} \)</b></span>,
+				<span><b>\( \int \dfrac{(7+cosx)dx}{3+2cosx-sinx} \)</b></span>
+			</p>
+
+			<div class="example">
+				<span class="title">ПРИМЕР</span>
+
+				<span>Найти интеграл:</span>
+				<span>\( \int \dfrac{dx}{3+2cosx-sinx} \)</span>
+
+				<hr class="line" color="#ffce48" width="70%">
+
+				<span>Решение:</span>
+				<span>Проведем универсальную тригонометрическую подстановку: \( z=tg(\dfrac{x}{2}) \)</span>
+				<span>\( x = 2arctg(z) => dx = \dfrac{2dz}{1+z^2} \)</span>
+				<span>При данной замене синусы и косинусы у нас превращаются в следующие дроби:</span>
+				<span>\( sin(x) = \dfrac{2z}{1+z^2} \)</span>
+				<span>\( cos(x) = \dfrac{1-z^2}{1+z^2} \)</span>
+
+				<span>Эти равенства основаны на известных тригонометрических формулах:</span>
+				<span class="formula"><b>\( sin(a) = \dfrac{2tg(\dfrac{a}{2})}{1 + tg^2(\dfrac{a}{2})} \)</b></span>
+				<span class="formula"><b>\( cos(a) = \dfrac{1 - tg^2(\dfrac{a}{2})}{1 + tg^2(\dfrac{a}{2})} \)</b></span>
+
+				<span>Производим в исходный интеграл подстановку: \( dx, sin(x), cos(x) \)</span>
+				<span>\( \int \dfrac{\dfrac{2dz}{1+z^2}}{3 + 2\dfrac{1-z^2}{1+z^2} - \dfrac{2z}{1+z^2}} =  \)</span>
+				<span>\( = \int \dfrac{\dfrac{2dz}{1+z^2}}{\dfrac{3(1+z^2) + 2(1-z^2) - 2z}{1 + z^2}} = \)</span>
+				<span>\( = 2\int \dfrac{dz}{z^2 - 2z + 5} = \)</span>
+				<span>\( = 2\int \dfrac{dz}{z^2 - 2z + 1 + 4} = \)</span>
+				<span>\( = 2\int \dfrac{d(z-1)}{(z-1)^2 + 2^2} = \)</span>
+				<span>Интегрируем по табличной формуле:</span>
+				<span>\( = arctg(\dfrac{z-1}{2}) + C = \)</span>
+				<span>Проводим обратную замену:</span>
+				<span>\( = arctg(\dfrac{tg(\dfrac{x}{2} - 1)}{2}) + C \)</span>
+
+				<hr class="line" color="#ffce48" width="70%">
+
+				<span>Ответ:</span>
+				<span>\( arctg(\dfrac{tg(\dfrac{x}{2} - 1)}{2}) + C \)</span>
+      	</div>
+		</div>
+	</div>
+</body>
+</html>
