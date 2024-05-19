@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Производная</title>
+
+  <link rel="stylesheet" href="lectures/style.css">
+</head>
+
+<body>
+  <div class="lectures">
+    <h2 class="title-lecture">Производная параметрически-заданных функций</h2>
+    
+    <p>Параметрическая функция задаётся в виде:</p>
+    <p>\( \begin{cases} y = f(t) \\ x = g(t) \end{cases} \), где <b>t</b> - это параметр функции</p>
+
+    <p>Производная параметрически заданной функции находится по обычным правилам дифференцирования, но с использованием дополнительных формул.</p>
+
+    <div class="rule">
+      <h3><i>Формула первой производной:</i></h3>
+
+      <span class="formula"><b>\( y'_{x} = \dfrac{y'_{t}}{x'_{t}} \)</b></span>
+
+      <div class="example">
+        <span class="title">ПРИМЕР</span>
+
+        <span>Найти первую производную функции:</span>
+        <span>\( \begin{cases} y = t^2 - 16 \\ x = t - 4 \end{cases} \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Решение:</span>
+        <span>Найдем неизвестные <b>\(y'_{t}\)</b> и <b>\(x'_{t}\)</b>:</span>
+        <span>\( y'_{t} = (t^2 - 16)'_{t} = 2t \)</span>
+        <span>\( x'_{t} = (t - 4)'_{t} = 1 \)</span>
+        <span>Подставим найденное в формулу:</span>
+        <span>\( y'_{x} = \dfrac{y'_{t}}{x'_{t}} = \dfrac{2t}{1} = 2t \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Ответ:</span>
+        <span>\(y'_{x} = 2t \)</span>
+      </div>
+    </div>
+
+    <div class="rule">
+      <h3><i>Формула второй производной:</i></h3>
+
+      <span class="formula"><b>\( y''_{xx} = \dfrac{(y'_{x})'_{t}}{x'_{t}} \)</b></span>
+
+      <div class="example">
+        <span class="title">ПРИМЕР</span>
+
+        <span>Найти вторую производную функции:</span>
+        <span>\( \begin{cases} y = sin2t \\ x = cos^2t \end{cases} \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Решение:</span>
+        <span>Как видно из формулы для начала нужно найти первую производную <b>\(y'_{x}\)</b>:</span>
+        <span>\( y'_{t} = (sin2t)'_{t} = cos2t · (2t)'_{t} = 2cos2t \)</span>
+        <span>\( x'_{t} = (cos^2t)'_{t} = 2cost · (cost)'_{t} = -2cost·sint = -sin2t \)</span>
+        <span>Тогда первая производная параметрической функции равна:</span>
+        <span>\( y'_{x} = \dfrac{2cos2t}{-sin2t} = -2ctg2t \)</span>
+        <span>Зная первую производную, находим вторую:</span>
+        <span>\( y''_{xx} = \dfrac{(-2ctg2t)'_{t}}{-sin2t} = \)</span>
+        <span>\( = \dfrac{2\dfrac{2}{sin^22t}}{-sin(2t)} = -\dfrac{4}{sin^3(2t)} \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Ответ:</span>
+        <span>\(y''_{xx} = -\dfrac{4}{sin^3(2t)} \)</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

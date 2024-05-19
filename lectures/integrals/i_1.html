@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Интегралы</title>
+
+	<link rel="stylesheet" href="lectures/style.css">
+</head>
+<body>
+	<div class="lectures">
+		<h2 class="title-lecture">Неопределенный интеграл</h2>
+
+		<p>Неопределенным интегралом называют комплекс всех первообразных функции f(х).</p>
+		<p>Формулу для расчета неопределенного интеграла можно записать в такой форме:</p>
+
+		<span class="formula"><b>\( \int f(x)dx = F(x) + C \)</b></span>
+
+		<ul>
+			<li>f(x) - подынтегральная функция;</li>
+			<li>F(x) - первообразная функция функции f(x);</li>
+			<li>dx - дифференциал;</li>
+			<li>C - численная константа интегрирования.</li>
+		</ul>
+
+		<p><b><u>Основные свойства неопределенного интеграла:</u></b></p>
+
+		<img src="lectures/img/properties-integral.png" alt="" />
+
+		<p style="margin-top: 15px;">
+			Таблица интегралов элементарных функций:
+			<a href="lectures/materials/tablitsa_integral.pdf" download>Скачать</a>
+		</p>
+
+		<div class="example">
+        <span class="title">ПРИМЕР</span>
+
+        <span>Найти интеграл:</span>
+        <span>\( \int (x^5 + \dfrac{1}{\sqrt{x}})dx \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Решение:</span>
+        <span>Интеграл суммы можно разложить на сумму интегралов:</span>
+        <span>\( \int (x^5)dx + \int(\dfrac{1}{\sqrt{x}})dx \)</span>
+        <span>Таким образом, каждый из интегралов преобразован в табличный вид. Решение можно найти с помощью таблицы:</span>
+		  <span>\( \dfrac{x^6}{6} + 2\sqrt{x} + C \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Ответ:</span>
+        <span>\( \dfrac{x^6}{6} + 2\sqrt{x} + C \)</span>
+      </div>
+	</div>
+</body>
+</html>

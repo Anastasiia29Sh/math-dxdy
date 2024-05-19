@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Производная</title>
+
+  <link rel="stylesheet" href="lectures/style.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+
+<body>
+  <div class="lectures">
+    <h2 class="title-lecture">Правила нахождения производных</h2>
+    
+    <div class="rule">
+      <h3><i>Первое правило дифференцирования:</i></h3>
+
+      <p>Постоянный множитель можно вынести за знак производной:</p>
+
+      <span class="formula"><b>(Сf(x))' = Сf '(x)</b></span>
+    </div>
+
+    <div class="rule">
+      <h3><i>Второе правило дифференцирования:</i></h3>
+
+      <p>Производная суммы равна сумме производных: </p>
+
+      <span class="formula"><b>(f(x) + g(x))' = f '(x) + g'(x)</b></span>
+
+      <p>Производная разности равна разности производных: </p>
+
+      <span class="formula"><b>(f(x) - g(x))' = f '(x) - g'(x)</b></span>
+
+      <div class="example">
+        <span class="title">ПРИМЕР</span>
+
+        <span>Найти производную функции:</span>
+        <span>\(f(x) = 8\,{x}^{3}+3\,{x}^{2}-x\)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Решение:</span>
+        <span>\(f '(x) = \left(8\,{x}^{3}\right)' + \left(3\,{x}^{2}\right)' - \left(x\right)'\)</span>
+        <span>Рассмотрим каждый член многочлена по отдельности:</span>
+        <span>\(\left(8\,{x}^{3}\right)' = 8\left({x}^{3}\right)' = 8·3{x}^{2} = 24{x}^{2}\)</span>
+        <span>\(\left(3\,{x}^{2}\right)' = 3\left({x}^{2}\right)' = 3·2{x} = 6{x}\)</span>
+        <span>\(\left(-{x}\right)' = -\left({x}\right)' = -1\)</span>
+        <span>\(f '(x) = \left(8\,{x}^{3}\right)'+\left(3\,{x}^{2}\right)'-\left(x\right)' = 24{x}^{2}+6{x}-1 \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Ответ:</span>
+        <span>\(f '(x) = 24{x}^{2}+6{x}-1 \)</span>
+      </div>
+    </div>
+
+    <div class="rule">
+      <h3><i>Третье правило дифференцирования:</i></h3>
+
+      <p>Производная произведения равна произведению первого множителя на второй плюс первый множитель, умноженный на производную второго:</p>
+
+      <span class="formula"><b>(f(x)·g(x))' = f '(x)·g(x) + f(x)·g'(x)</b></span>
+
+      <div class="example">
+        <span class="title">ПРИМЕР</span>
+
+        <span>Найти производную функции:</span>
+        <span>\(f(x) = \left(3{x}-4\right) · \left(4-5{x}\right) \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Решение:</span>
+        <span>\(f '(x) = \left(3{x}-4\right)' · \left(4-5{x}\right) + \left(3{x}-4\right) · \left(4-5{x}\right)'\)</span>
+        <span>\(f '(x) = 12 - 15{x} - 15{x} + 20 = 32 - 30{x}\)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Ответ:</span>
+        <span>\(f '(x) = 32 - 30{x} \)</span>
+      </div>
+    </div>
+
+    <div class="rule">
+      <h3><i>Четвертое правило дифференцирования:</i></h3>
+
+      <p>Производная частного равна производной числителя, умноженного на знаменатель минус числитель, умноженный на производную знаменателя и все это деленное на квадрат знаменателя.</p>
+
+      <span class="formula"><b>\(\left(\dfrac{f({x})}{g({x})}\right)' = \dfrac{f'({x})g({x}) - f({x})g'({x})} {g^2({x})} \)</b></span>
+
+      <div class="example">
+        <span class="title">ПРИМЕР</span>
+
+        <span>Найти производную функции:</span>
+        <span>\(f(x) = \left(\dfrac{x-5}{2\,x-5}\right) \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Решение:</span>
+        <span>\(\left(\dfrac{x-5}{2\,x-5}\right)' = \dfrac{\left(x-5\right)' · \left(2\,x-5\right)-\left(2\,x-5\right)' · \left(x-5\right)}{\left({2\,x-5}\right)^{2}} \)</span>
+        <span>\( \left(\dfrac{x-5}{2\,x-5}\right)' = \dfrac{(2{x}-5) - (2{x}-10)}{(2{x}-5)^2} \)</span>
+        <span>\( \left(\dfrac{x-5}{2\,x-5}\right)' = \dfrac{5}{(2{x}-5)^2} \)</span>
+
+        <hr class="line" color="#ffce48" width="70%">
+
+        <span>Ответ:</span>
+        <span>\(f '(x) = \dfrac{5}{(2{x}-5)^2} \)</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Производная</title>
+
+  <link rel="stylesheet" href="lectures/style.css">
+</head>
+
+<body>
+  <div class="lectures">
+    <h2 class="title-lecture">Производная сложной функции</h2>
+
+    <p>Производная сложной функции находится по формуле:</p>
+
+    <span class="formula"><b>(f(g(x)))' = f '(g(x))·g'(x)</b></span>
+
+    <div class="example">
+      <span class="title">ПРИМЕР</span>
+
+      <span>Найти производную функции:</span>
+      <span>\(s = (sin{x} - 2cos{x})^3 \)</span>
+
+      <hr class="line" color="#ffce48" width="70%">
+
+      <span>Решение:</span>
+      <span>\(s' = 3(sin{x} - 2cos{x})^2 · (sin{x} - 2cos{x})' \)</span>
+      <span>\( (sin{x} - 2cos{x})' = (sin{x})' - (2cos{x})' = cos{x} - 2(cos{x}) =  \)</span>
+      <span>\( = cos{x} - 2(-sin{x}) = cos{x} + 2sin{x} \)</span>
+
+      <hr class="line" color="#ffce48" width="70%">
+
+      <span>Ответ:</span>
+      <span>\(s' = 3(sin{x} - 2cos{x})^2 · (cos{x} + 2sin{x}) \)</span>
+    </div>
+  </div>
+</body>
+</html>
